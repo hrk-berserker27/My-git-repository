@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .btn {
+        height: 70x;
+        width: 150px;
+        font-weight: bolder;
+        margin: 2px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .Counter {
+        height: 400px;
+        width: 500px;
+        margin: auto;
+        border: 2px solid;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .number {
+        font-size: 100px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Counter">
+      <div class="number">0</div>
+      <button id="#b1" class="btn" onclick="increment()">Increment</button>
+      <button id="#b2" class="btn" onclick="decrement()">Decrement</button>
+      <button id="#b3" class="btn" onclick="reset()">Reset</button>
+    </div>
+    <script>
+      function increment() {
+        const x = document.getElementsByClassName("number")[0];
+        x.style.color = "red";
+        let d = x.innerText; //Method 1 to edit DOM -> doesn't work on style and script if added to text.
+        d++;
+        x.innerHTML = d;
+      }
+      function decrement() {
+        const x = document.getElementsByClassName("number")[0];
+        x.style.color = "grey";
+        let d = x.childNodes[0].nodeValue; //Method 2 to edit DOM
+        d--;
+        x.innerHTML = d;
+      }
+      function reset() {
+        const x = document.getElementsByClassName("number")[0];
+        x.style.color = "black";
+        let d = x.textContent; //Method 3 to edit DOM
+        d = 0;
+        x.innerHTML = d;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hex colors</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        width: 50%;
+        height: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+      }
+      .btn {
+        padding: 15px;
+        font-size: larger;
+      }
+      span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <button class="btn" onclick="bgHex()">
+        Click me: <span>#000000</span>
+      </button>
+    </div>
+    <script>
+      function bgHex() {
+        const hex = [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+        ];
+        let col = "#";
+        for (let index = 0; index < 6; index++) {
+          let m = Math.floor(Math.random() * (15 - 0 + 1));
+          col += hex[m];
+        }
+        document.getElementsByTagName("span")[0].innerHTML = col;
+        document.getElementsByClassName("body")[0].style.backgroundColor = col;
+      }
+    </script>
+  </body>
+</html>
