@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout your reviews</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap");
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat Alternates", sans-serif;
+      }
+
+      .img-container {
+        height: 20vh;
+        width: 20vh;
+        border-top: 1px solid rgb(90, 168, 231);
+        border-right: 5px solid rgb(90, 168, 231);
+        border-radius: 40vmax;
+        margin: 1em;
+      }
+      .container {
+        height: 80vh;
+        width: 100vh;
+        border: 1px solid rgb(167, 164, 164);
+        border-radius: 2.5vmax;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        box-shadow: 10px 10px 10px 0px rgba(182, 179, 179, 0.3); /*offset-x offset-y blur-radius spread-radius */
+      }
+      .comment {
+        /* display: flex;
+        flex-flow: column wrap;
+        align-items: center; */
+        text-align: center;
+        padding: 0.3rem;
+        height: 30vh;
+        width: 50vh;
+      }
+      .arrow2 {
+        position: absolute;
+        top: 25rem;
+        left: 38rem;
+        filter: invert(1);
+        margin: 5px;
+        height: 1rem;
+        width: 1rem;
+      }
+      .arrow1 {
+        position: absolute;
+        top: 25rem;
+        right: 38rem;
+        filter: invert(1);
+        margin: 5px;
+        height: 1rem;
+        width: 1rem;
+      }
+      p {
+        color: rgb(124, 207, 56);
+        margin: 2px;
+      }
+      #img_person {
+        height: 20.2vh;
+        width: 19.2vh;
+        border-radius: 40vmax;
+      }
+      img:hover {
+        cursor: pointer;
+      }
+      h1 {
+        color: rgb(32, 10, 10);
+        margin: 30px;
+      }
+      .btn {
+        margin: 5px;
+        padding: 0.3rem;
+        border-radius: 0.6vmax;
+        border-color: rgb(77, 173, 238);
+        background-color: white;
+        color: black;
+      }
+      .btn:hover {
+        background-color: rgb(77, 173, 238);
+        color: white;
+        cursor: pointer;
+      }
+      #name {
+        font-family: "Montserrat Alternates";
+        color: black;
+      }
+      #name {
+        font-family: monospace;
+        color: rgb(90, 168, 231);
+      }
+      hr {
+        border: none;
+        border-top: 8px double rgb(28, 159, 211);
+        height: 10px;
+      }
+      #review {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Our Reviews
+      <hr />
+    </h1>
+    <div class="container">
+      <div class="img-container">
+        <img src="img1.jpg" id="img_person" alt="item1" />
+      </div>
+      <div class="comment">
+        <p id="name"></p>
+        <p id="job"></p>
+        <div id="review"></div>
+        <img class="arrow1" src="arrowkey1.png" />
+        <img class="arrow2" src="arrowkey2.png" />
+      </div>
+      <button class="btn">Choose any random review</button>
+    </div>
+
+    <script>
+      class Customer {
+        constructor(image, name, job, review) {
+          this.image = image;
+          this.personname = name;
+          this.job = job;
+          this.review = review;
+        }
+      }
+
+      const Person1 = new Customer(
+        "img1.jpg",
+        "Sofia Romanoff",
+        "Intern",
+        "I really liked this app and would be very happy to collab with you in near future."
+      );
+      const Person2 = new Customer(
+        "img2.jpg",
+        "Kavita Sharma",
+        "Backend developer",
+        "I really liked this app and would be very happy to collab with you in near future."
+      );
+      const Person3 = new Customer(
+        "img3.jpg",
+        "Xi sung shi",
+        "Frontend developer",
+        "I really liked this app and would be very happy to collab with you in near future."
+      );
+      const Person4 = new Customer(
+        "img4.jpg",
+        "Jacob Accord",
+        "Software developer",
+        "I really liked this app and would be very happy to collab with you in near future."
+      );
+      const reviews = [Person1, Person2, Person3, Person4];
+      const len = reviews.length;
+      const img = document.getElementById("img_person");
+      const author = document.getElementById("name");
+      const job = document.getElementById("job");
+      const review = document.getElementById("review");
+
+      const nextBtn = document.querySelector(".arrow1");
+      const prevBtn = document.querySelector(".arrow2");
+      const randomBtn = document.querySelector(".btn");
+      //load initial item
+      let currentItem = 0;
+      window.addEventListener("DOMContentLoaded", function () {
+        display();
+      });
+      //display the details of first item
+      function display() {
+        const item = reviews[currentItem];
+        img.src = item.image;
+        author.textContent = item.personname;
+        job.textContent = item.job;
+        review.textContent = item.review;
+      }
+      nextBtn.addEventListener("click", function () {
+        currentItem++;
+        if (currentItem > len - 1) {
+          currentItem = 0;
+        }
+        display();
+      });
+      prevBtn.addEventListener("click", function () {
+        currentItem--;
+        if (currentItem < 0) {
+          currentItem = len - 1;
+        }
+        display();
+      });
+      randomBtn.addEventListener("click", function () {
+        currentItem = Math.floor(Math.random() * len);
+        console.log(currentItem);
+        display();
+      });
+    </script>
+  </body>
+</html>
