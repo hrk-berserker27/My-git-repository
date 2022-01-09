@@ -78,6 +78,10 @@
     padding: 0.3rem;
     background-color: white;
     text-align: center;
+    height: 0rem;
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+
     /* display: none; */
   }
   li {
@@ -96,8 +100,11 @@
   }
   .social-media {
     max-width: 100%;
+    height: 0;
+    overflow: hidden;
     background-color: white;
     text-align: center;
+    transition: all 1s;
     /* display: none; */
   }
   #burger {
@@ -108,9 +115,9 @@
     cursor: pointer;
   }
   .link {
-    display: none;
+    height: 10rem;
   }
   .social {
-    display: none;
+    height: 2rem;
   }
 }
