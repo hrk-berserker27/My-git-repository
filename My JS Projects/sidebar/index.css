@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@media screen and (min-width: 870px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .ham {
+    position: fixed;
+    top: 2%;
+    left: 94%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px;
+  }
+  .ham:hover {
+    cursor: pointer;
+    transform: rotateZ(90deg);
+    transform-origin: center;
+    transition: all 1.2s ease-in-out;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 30%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  #logo {
+    color: rgb(96, 153, 228);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-family: "Raleway", sans-serif;
+  }
+  #logo:hover {
+    cursor: pointer;
+  }
+  .list {
+    list-style-type: none;
+    font-family: "Nunito", sans-serif;
+    color: rgba(31, 28, 28);
+    font-weight: bolder;
+  }
+  .cross {
+    position: fixed;
+    top: 1rem;
+    left: 88%;
+    height: 2rem;
+    width: 2rem;
+  }
+  .links {
+    padding: 1rem;
+  }
+  .links:hover {
+    box-shadow: 2px 2px 4px rgba(185, 181, 181, 0.3);
+    cursor: pointer;
+  }
+}
+.toggle {
+  transform: translateX(1%);
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 200px) and (max-width: 869px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .ham {
+    position: absolute;
+    top: 2%;
+    left: 90%;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px;
+  }
+  .ham:hover {
+    cursor: pointer;
+    transform: rotateZ(90deg);
+    transition: all 0.5s ease-in-out;
+  }
+  .sidebar {
+    height: 100%;
+    max-width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  #logo {
+    height: 2rem;
+    width: 2rem;
+    color: rgb(96, 153, 228);
+    margin: 1rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .list {
+    list-style-type: none;
+    color: rgba(14, 12, 12);
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+    max-width: 100%;
+  }
+  .links {
+    padding: 1rem;
+  }
+  .links:hover {
+    box-shadow: 2px 2px 4px rgba(185, 181, 181, 0.3);
+  }
+  .cross {
+    position: fixed;
+    height: 2rem;
+    width: 2rem;
+    top: 100%;
+    left: 50%;
+  }
+  .toggle {
+    transform: translateX(1%);
+    transition: all 0.5s ease-in-out;
+  }
+}
