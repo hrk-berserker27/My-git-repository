@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.food-image {
+  width: 95%;
+  height: 200px;
+  margin-left: 1rem;
+}
+
+img {
+  width: 100%;
+  height: 194px;
+  border-radius: 1rem;
+  border: 3px solid #ad7f0b;
+}
+
+img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+  max-width: 100px;
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  margin: 0 1.5rem;
+  border-radius: 10px;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
+  background-color: goldenrod;
+  color: white;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 200px) and (max-width: 799px) {
+  body {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    padding: 1rem;
+  }
+  .card {
+    position: relative;
+    height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 400px;
+    max-width: 50vw;
+    max-height: 500px;
+    margin: 3rem auto;
+  }
+  .heading {
+    font-size: 800;
+    font-family: sans-serif;
+    margin: 1.5rem;
+    width: 100%;
+  }
+  .heading hr {
+    height: 5px;
+    width: 10%;
+    max-width: 100%;
+    background-color: goldenrod;
+    border: none;
+    margin: auto;
+  }
+  .food-name {
+    font-family: Verdana;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .price {
+    color: goldenrod;
+  }
+  .id {
+    width: 100%;
+    height: 12%;
+    padding: 0.5rem;
+    -webkit-box-shadow: 0px 0px 8px 2px #9c9999;
+            box-shadow: 0px 0px 8px 2px #9c9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .More-details {
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 0px 5px 5px 2px #9c9999;
+            box-shadow: 0px 5px 5px 2px #9c9999;
+    margin-left: 1rem;
+    padding: 2rem;
+  }
+  .More-details::-moz-selection {
+    background-color: goldenrod;
+    color: white;
+  }
+  .More-details::selection {
+    background-color: goldenrod;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 2000px) {
+  body {
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+  }
+  .card {
+    position: relative;
+    height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    margin: 3rem auto;
+  }
+  .heading {
+    font-size: 800;
+    font-family: sans-serif;
+    margin: 1.5rem;
+    width: 100%;
+  }
+  .heading hr {
+    height: 5px;
+    width: 10%;
+    max-width: 100%;
+    background-color: goldenrod;
+    border: none;
+    margin: auto;
+  }
+  .food-name {
+    font-family: Verdana;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .price {
+    color: goldenrod;
+  }
+  .id {
+    width: 100%;
+    height: 12%;
+    padding: 0.5rem;
+    -webkit-box-shadow: 0px 0px 8px 2px #9c9999;
+            box-shadow: 0px 0px 8px 2px #9c9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .More-details {
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: 0px 5px 5px 2px #9c9999;
+            box-shadow: 0px 5px 5px 2px #9c9999;
+    margin-left: 1rem;
+    padding: 2rem;
+  }
+  .More-details::-moz-selection {
+    background-color: goldenrod;
+    color: white;
+  }
+  .More-details::selection {
+    background-color: goldenrod;
+    color: white;
+  }
+  .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+/*# sourceMappingURL=index.css.map */

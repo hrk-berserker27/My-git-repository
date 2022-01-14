@@ -1,0 +1,30 @@
+.button-container {
+  @include flex-cont(row);
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.btn1 {
+  max-width: 100px;
+  border: none;
+  outline: none;
+  padding: 0.4rem;
+  margin: 0 1.5rem;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $underlining-color;
+    color: white;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+}
+.btn2 {
+  @extend.btn1;
+}
+.btn3 {
+  @extend.btn1;
+}
+.btn4 {
+  @extend.btn1;
+}
