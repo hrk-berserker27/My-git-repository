@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 2400px) and (min-width: 200px) {
+  .preloader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    visibility: visible;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+  img {
+    display: block;
+  }
+  .video-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
+    max-width: 100vw;
+    z-index: -5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hide {
+    visibility: hidden;
+  }
+  h1 {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    z-index: -2;
+  }
+  .switch {
+    position: absolute;
+    top: 87%;
+    left: 1%;
+    height: 46px;
+    width: 126px;
+    outline: none;
+    border: none;
+    background-color: #247899;
+    border-radius: 15px;
+    z-index: -1;
+  }
+  span {
+    height: 46px;
+    width: 63px;
+    padding: 13px;
+  }
+  .switch-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 13px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .switchBtnPlay {
+    left: 50%;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 67, 67, 0.6);
+    z-index: -1;
+  }
+}
+/*# sourceMappingURL=index.css.map */

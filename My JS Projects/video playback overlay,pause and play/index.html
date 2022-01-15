@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playback</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="preloader.gif" alt="preload" />
+    </div>
+    <!-- header -->
+    <header>
+      <video class="video-container" muted autoplay loop>
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <h1>This is heading.</h1>
+    </header>
+
+    <button class="switch">
+      <span>play</span><span>pause</span><span class="switch-btn"></span>
+    </button>
+  </body>
+</html>
