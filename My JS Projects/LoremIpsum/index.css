@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.4em;
+}
+.heading {
+  color: rgb(43, 98, 182);
+  font-family: Verdana, Tahoma, sans-serif;
+}
+form {
+  padding: 0 0.4em;
+  margin: 2em;
+}
+.para {
+  width: 50%;
+  padding: 3px;
+  outline: none;
+  /* margin: auto; */
+}
+.btn {
+  padding: 8px;
+  outline: none;
+  border: none;
+  margin: 0 1em;
+  background-color: rgb(43, 98, 182);
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 1em;
+}
+.paragraph {
+  width: 50%;
+  margin: auto;
+}
+.par {
+  color: rgb(75, 111, 165);
+  padding: 0.4em;
+}
