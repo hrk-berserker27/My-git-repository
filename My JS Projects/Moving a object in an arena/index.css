@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --top: 37vh;
+  --left: 35vh;
+  --lengthOfSnake: 1em;
+  --breadthOfSnake: 1em;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0, 0.9);
+}
+.gamebox {
+  height: 40vh;
+  width: 40vh;
+  background-color: aliceblue;
+  margin: 1em;
+  position: relative;
+}
+.snakeFood {
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  background-color: red;
+  animation: fade 1s ease infinite;
+}
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+.snake {
+  height: var(--lengthOfSnake);
+  width: var(--breadthOfSnake);
+  background-color: green;
+  position: absolute;
+  top: var(--positionY);
+  left: var(--positionX);
+  transform: translate(var(--moveX), var(--moveY));
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+.head {
+  height: 5px;
+  width: 1em;
+  background-color: red;
+  display: inline-block;
+  display: none;
+}
+.controls {
+  display: grid;
+  place-items: center center;
+  grid-gap: 2px;
+}
+button {
+  width: 90px;
+  height: 50px;
+  border-radius: 30%;
+  padding: 10px;
+  border: none;
+  background-color: white;
+}
+.btn {
+  grid-column: 2/3;
+}
+.btn1 {
+  grid-column: 2/3;
+}
+.btn2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.btn3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.btn4 {
+  grid-column: 2/3;
+}
+.instruction {
+  margin: 10px;
+  color: white;
+}
+.score {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(161, 74, 89);
+}
